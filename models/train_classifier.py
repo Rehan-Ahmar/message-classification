@@ -3,7 +3,6 @@ import re
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-import pickle
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -16,6 +15,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from sklearn.externals import joblib
 
 import nltk
 nltk.download(['punkt', 'stopwords', 'wordnet', 'averaged_perceptron_tagger'])
@@ -76,11 +76,10 @@ def build_gridsearch_model():
     ])
     parameters = {
         'vect__ngram_range': ((1, 1), (1, 2)),
-        'clf__estimator__n_estimators': [50, 100]
-        #'clf__estimator__n_estimators': [100, 200, 500],
-        #'clf__estimator__max_depth': [None, 10, 20, 50],
-        #'clf__estimator__min_samples_leaf': [1, 2, 4],
-        #'clf__estimator__min_samples_split': [2, 5, 7]
+        'clf__estimator__n_estimators': [50, 100, 200],
+        'clf__estimator__max_depth': [None, 10, 20, 50],
+        'clf__estimator__min_samples_leaf': [1, 2, 4],
+        'clf__estimator__min_samples_split': [2, 5, 7]
     }
     return GridSearchCV(pipeline, param_grid=parameters, verbose=2, n_jobs=-1)
     
@@ -110,8 +109,7 @@ def save_model(model, model_filepath):
     Returns:
         None
     """
-    with open(model_filepath, 'wb') as f:
-        pickle.dump(model, f)
+    joblib.dump(model, model_filepath)
 
 
 def main():
