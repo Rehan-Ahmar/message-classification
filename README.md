@@ -4,9 +4,9 @@
 
 1. [Project Motivation](#motivation)
 2. [Installation](#installation)
-3. [Usage Instructions](#usage)
-4. [File Structure](#files)
-5. [Results](#results)
+3. [File Structure](#files)
+4. [Usage Instructions](#usage)
+5. [Output](#output)
 6. [Acknowledgements](#acknowledgements)
 
 
@@ -25,7 +25,29 @@ The main objectives of this project were the following:
 
 The code should run using any Python versions 3.*. I used python 3.6.
 
-Libraries Used : numpy, pandas, sklearn, nltk, sqlalchemy, plotly, Flask, bootstrap
+Libraries Used : numpy, pandas, sklearn, nltk, sqlalchemy, plotly, flask, bootstrap
+
+
+<a name="files"></a>
+## File Structure
+
+    - app
+    | - template
+    | |- master.html  # main page of web app
+    | |- go.html  # classification result page of web app
+    | - run.py  # Flask file that runs app, contains code for visualization and prediction.
+    
+    - data
+    |- disaster_categories.csv  # data to process
+    |- disaster_messages.csv  # data to process
+    |- process_data.py   # ETL Pipeline
+    |- InsertDatabaseName.db   # database to save clean data to
+    
+    - models
+    |- train_classifier.py   # Machine Learning Pipeline
+    |- classifier.pkl  # saved model
+    
+    - README.md
 
 
 <a name="usage"></a>
@@ -39,32 +61,21 @@ Libraries Used : numpy, pandas, sklearn, nltk, sqlalchemy, plotly, Flask, bootst
     2. Run the following command in the app's directory to run your web app.
         `python run.py`
     
-    3. Go to http://0.0.0.0:3001/
+    3. Go to [http://localhost:3001/]
 
 
-<a name="files"></a>
-## File Structure
-    <pre>
-    - app
-    | - template
-    | |- master.html  # main page of web app
-    | |- go.html  # classification result page of web app
-    | - run.py  # Flask file that runs app, contains code for visualization and prediction.
-    
-    - data
-    |- disaster_categories.csv  # data to process 
-    |- disaster_messages.csv  # data to process
-    |- process_data.py   # ETL Pipeline
-    |- InsertDatabaseName.db   # database to save clean data to
-    
-    - models
-    |- train_classifier.py   # Machine Learning Pipeline
-    |- classifier.pkl  # saved model 
-    
-    - README.md
-    </pre>
+<a name="output"></a>
+### Output
+In the web app, a user can input any new message, and check out the predicted categories that message might belong to.
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/1.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/2.PNG)
+
+The web app also shows some visualizations for the training data in database.
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/3.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/4.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/5.PNG)
 
 
 <a name="acknowledgements"></a>
 ## Acknowledgements
-Thanks to [Figure Eight](https://www.figure-eight.com/) for the data, and Udacity for course material.
+Thanks to [Figure Eight](https://www.figure-eight.com/) for the data, and [Udacity](https://in.udacity.com/) for course material.
