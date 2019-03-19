@@ -69,14 +69,14 @@ Libraries Used : numpy, pandas, sklearn, nltk, sqlalchemy, plotly, flask, bootst
 ### Output
 In the web app, user can input a new message and get the predicted categories.
 
-    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/1.PNG)
-    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/2.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/1.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/2.PNG)
 
 The web app also shows some visualizations for the training data in database.
 
-    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/3.PNG)
-    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/4.PNG)
-    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/5.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/3.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/4.PNG)
+![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/5.PNG)
 
 
 <a name="acknowledgements"></a>
