@@ -15,7 +15,7 @@
 This project was created as part of Udacity's Data Scientist for Enterprise nanodegree.
 
 The main objectives of this project were the following:
-  - An ETL pipeline for loading data from csv files, transforming and cleaning the data, and finally loading it to an sqlite database.
+  - An ETL pipeline for loading data from csv files, transforming and cleaning the data, and finally storing it to an sqlite database.
   - A Machine learning pipeline to predict the categories of different messages recorded during natural disasters.
   - A web app that displays few visualisations of the data and classifies new input messages into multiple categories.
 
@@ -41,12 +41,13 @@ Libraries Used : numpy, pandas, sklearn, nltk, sqlalchemy, plotly, flask, bootst
     |- disaster_categories.csv  # data to process
     |- disaster_messages.csv  # data to process
     |- process_data.py   # ETL Pipeline
-    |- InsertDatabaseName.db   # database to save clean data to
+    |- DisasterResponse.db   # database to save clean data
     
     - models
     |- train_classifier.py   # Machine Learning Pipeline
     |- classifier.pkl  # saved model
     
+    - notebooks   # contains Jupyter notebooks used to create ETL and ML Pipelines.
     - README.md
 
 
@@ -66,14 +67,16 @@ Libraries Used : numpy, pandas, sklearn, nltk, sqlalchemy, plotly, flask, bootst
 
 <a name="output"></a>
 ### Output
-In the web app, a user can input any new message, and check out the predicted categories that message might belong to.
-![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/1.PNG)
-![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/2.PNG)
+In the web app, user can input a new message and get the predicted categories.
+
+    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/1.PNG)
+    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/2.PNG)
 
 The web app also shows some visualizations for the training data in database.
-![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/3.PNG)
-![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/4.PNG)
-![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/5.PNG)
+
+    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/3.PNG)
+    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/4.PNG)
+    ![alt text](https://github.com/Rehan-Ahmar/message-classification/blob/master/assets/5.PNG)
 
 
 <a name="acknowledgements"></a>
